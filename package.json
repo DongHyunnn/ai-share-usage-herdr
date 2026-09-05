@@ -1,0 +1,22 @@
+{
+  "name": "ai-share-usage-herdr",
+  "version": "0.1.0",
+  "description": "AI Share Usage as a herdr plugin, and a standalone `ais` install",
+  "license": "MIT",
+  "bin": {
+    "ais": "bin/ais.mjs"
+  },
+  "files": [
+    "bin/",
+    "herdr-plugin.toml",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DongHyunnn/ai-share-usage-herdr"
+  }
+}

@@ -1,0 +1,66 @@
+# AI Share Usage as a herdr plugin.
+#
+# herdr runs every command as argv, without a shell, so each one names `node`
+# and a file inside this directory. State goes to $HERDR_PLUGIN_STATE_DIR; the
+# plugin checkout stays read-only.
+id = "ai-share-usage"
+name = "AI Share Usage"
+version = "0.1.0"
+description = "Shared Codex (ChatGPT) account usage in the sidebar: your share, the account, alerts"
+min_herdr_version = "0.7.0"
+platforms = ["linux", "macos"]
+
+# Runs on `herdr plugin install` only. The bundle has no dependencies, so this
+# just materializes the `ais` bin link.
+[[build]]
+command = ["npm", "ci", "--omit=dev"]
+
+# One-shot: it spawns a detached `ais daemon` and exits immediately.
+[[startup]]
+command = ["node", "bin/startup.mjs"]
+
+[[actions]]
+id = "refresh"
+title = "Refresh usage / 사용량 새로고침"
+contexts = ["workspace"]
+command = ["node", "bin/ais.mjs", "daemon", "--once"]
+
+[[panes]]
+id = "dashboard"
+title = "Usage dashboard / 사용량 대시보드"
+placement = "popup"
+width = "80%"
+height = "80%"
+command = ["node", "bin/ais.mjs", "dashboard"]
+
+[[panes]]
+id = "join"
+title = "Join with invite / 초대 코드로 참여"
+placement = "popup"
+width = "80%"
+height = "80%"
+command = ["node", "bin/ais.mjs", "join", "--prompt"]
+
+[[panes]]
+id = "invite"
+title = "Show invite / 초대 코드 보기"
+placement = "popup"
+width = "80%"
+height = "80%"
+command = ["node", "bin/ais.mjs", "invite"]
+
+[[panes]]
+id = "login"
+title = "Sign in with GitHub / GitHub 로그인"
+placement = "popup"
+width = "80%"
+height = "80%"
+command = ["node", "bin/ais.mjs", "login"]
+
+[[panes]]
+id = "logout"
+title = "Sign out / 로그아웃"
+placement = "popup"
+width = "80%"
+height = "80%"
+command = ["node", "bin/ais.mjs", "logout"]
