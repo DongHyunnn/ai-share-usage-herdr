@@ -1,6 +1,6 @@
 {
   "name": "ai-share-usage-herdr",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "AI Share Usage as a herdr plugin, and a standalone `ais` install",
   "license": "MIT",
   "bin": {

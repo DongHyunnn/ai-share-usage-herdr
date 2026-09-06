@@ -34,6 +34,9 @@ server address and the public key, so there is nothing else to configure. The
 - **Popup panes** — `Usage dashboard` (the full-screen dashboard), `Join with
   invite`, `Show invite`, `Sign in with GitHub`, `Sign out`.
 - **Action `Refresh usage`** — runs one collect-and-upload cycle now.
+- **`ais open`** — the same dashboard in a browser tab, served by the daemon on
+  `127.0.0.1`. Handy on a machine where the popup pane is too small, or when
+  someone else on the team has no herdr at all.
 - **Notifications** — a warning at 80% of your share, alarms at 100% of your
   share and 90% of the account, once per weekly window.
 
