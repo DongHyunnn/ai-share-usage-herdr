@@ -4,6 +4,9 @@ Several people, one Codex (ChatGPT) account. This plugin puts everyone's share
 of this week's quota in the herdr sidebar, live: `48% / 61%` means the account
 is 61% used and your 1/N share is 48% used.
 
+**Homepage: <https://donghyunnn.github.io/ai-share-usage/>** — the desktop app,
+the VS Code extension and this plugin, with install instructions.
+
 Codex only reports usage for the whole account, never per person. Each member's
 client uploads its own per-model token counts to a Supabase project the team
 owns, next to account snapshots; comparing the percent gained between two
@@ -50,6 +53,7 @@ herdr runs; it skips the spawn when one is already working. State lives in
 The same bundle is a normal CLI:
 
 ```sh
+npm i -g ai-share-usage-cli                       # or, without the registry:
 npm i -g github:DongHyunnn/ai-share-usage-herdr
 ais join <invite>
 ais daemon &
