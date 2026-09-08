@@ -5,7 +5,7 @@
 # plugin checkout stays read-only.
 id = "ai-share-usage"
 name = "AI Share Usage"
-version = "0.1.3"
+version = "0.1.4"
 description = "Shared Codex (ChatGPT) account usage in the sidebar: your share, the account, alerts"
 min_herdr_version = "0.7.0"
 platforms = ["linux", "macos"]

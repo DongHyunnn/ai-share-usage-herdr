@@ -47,6 +47,8 @@ The startup hook spawns a detached `ais daemon` that keeps collecting while
 herdr runs; it skips the spawn when one is already working. State lives in
 `$HERDR_PLUGIN_STATE_DIR/ais` (`settings.json`, `session.json`, `cursors.json`,
 `alerts.json`, `daemon.json`, `daemon.log`), never in the plugin checkout.
+The default sources are OMO (including discovered Senpi child sessions), Codex
+rollout logs, and Gajae Code sessions.
 
 ## Without herdr
 
@@ -117,6 +119,8 @@ herdr plugin install DongHyunnn/ai-share-usage-herdr
 시작 훅이 `ais daemon`을 백그라운드로 띄우고, 이미 돌고 있으면 다시 띄우지
 않습니다. 상태 파일은 `$HERDR_PLUGIN_STATE_DIR/ais`에 저장되며 플러그인
 디렉터리에는 아무것도 쓰지 않습니다.
+기본 수집 대상은 OMO(발견된 Senpi 자식 세션 포함), Codex rollout 로그,
+Gajae Code 세션입니다.
 
 ## herdr 없이 쓰기
 
